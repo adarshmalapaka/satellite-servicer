@@ -1,0 +1,43 @@
+satellite_servicer: 
+  
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers ---------------------------------------
+  joint1_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_1
+    pid: {p: 1000, i: 120.0, d: 220.0}
+    # pid: {p: 100.0, i: 0.1, d: 1.0}
+
+  joint2_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_2
+    pid: {p: 100000, i: 520.0, d: 1020.0}
+    # pid: {p: 1000.0, i: 40.0, d: 100.0}
+
+  joint3_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_3
+    pid: {p: 8000, i: 220.0, d: 320.0}
+    # pid: {p: 500.0, i: 40.0, d: 100.0}
+
+  joint4_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_4
+    pid: {p: 8000, i: 220.0, d: 320.0}
+    # pid: {p: 500.0, i: 40.0, d: 100.0}
+
+  joint5_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_5
+    pid: {p: 8000, i: 220.0, d: 320.0}
+    # pid: {p: 500.0, i: 40.0, d: 100.0}
+
+  joint6_pos_control:
+    type: effort_controllers/JointPositionController
+    joint: joint_6
+    pid: {p: 4000.0, i: 40.0, d: 100.0}
+    # pid: {p: 500.0, i: 40.0, d: 100.0}

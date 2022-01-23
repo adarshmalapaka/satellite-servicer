@@ -1,0 +1,38 @@
+<launch>
+
+    <node pkg="satellite_servicer" 
+          name="move_to_points_pub" 
+          type="move_to_points_pub.py" 
+          output= "screen"/>
+     
+    <node pkg="satellite_servicer" 
+          name="joint1_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint1_pos_control/command/delayed /satellite_servicer/joint1_pos_control/command 2.5" />  
+
+    <node pkg="satellite_servicer" 
+          name="joint2_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint2_pos_control/command/delayed /satellite_servicer/joint2_pos_control/command 2.5" />  
+
+    <node pkg="satellite_servicer" 
+          name="joint3_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint3_pos_control/command/delayed /satellite_servicer/joint3_pos_control/command 2.5" />  
+
+    <node pkg="satellite_servicer" 
+          name="joint4_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint4_pos_control/command/delayed /satellite_servicer/joint4_pos_control/command 2.5" />  
+
+    <node pkg="satellite_servicer" 
+          name="joint5_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint5_pos_control/command/delayed /satellite_servicer/joint5_pos_control/command 2.5" />  
+
+    <node pkg="satellite_servicer" 
+          name="joint6_pos_delay" 
+          type="msg_delay.py" 
+          args= "/satellite_servicer/joint6_pos_control/command/delayed /satellite_servicer/joint6_pos_control/command 2.5" />  
+
+</launch>
